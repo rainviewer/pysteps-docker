@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM ubuntu:focal
 
 RUN mkdir -p /app \
     && apt-get update -y \
@@ -25,4 +25,4 @@ COPY requirements.txt /app/
 RUN cd /app \
     && export LC_ALL=C.UTF-8 \
     && pip3 install --no-cache-dir -r /app/requirements.txt \
-    && pip3 install https://github.com/pySTEPS/pysteps/archive/v1.3.2.tar.gz
+    && pip3 install https://github.com/pySTEPS/pysteps/archive/v1.5.0.tar.gz
